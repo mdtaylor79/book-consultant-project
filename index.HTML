@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Expertise Into a Published Book in 30-45 Days</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            color: white;
+            background: rgba(0,0,0,0.1);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .hero .tagline {
+            font-size: 1.2rem;
+            background: rgba(255,255,255,0.2);
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .stat-card p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .value-section {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .value-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .benefit {
+            padding: 30px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit:hover {
+            transform: scale(1.05);
+        }
+        
+        .benefit h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .benefit p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        .pricing {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        .pricing-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .payment-plan {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(238, 90, 36, 0.3);
+            margin: 20px 10px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(238, 90, 36, 0.4);
+        }
+        
+        .guarantee {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+            border: 2px dashed #667eea;
+        }
+        
+        .guarantee h3 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .timeline {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .timeline h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .timeline-day {
+            background: white;
+            color: #667eea;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-right: 20px;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(180deg); }
+        }
+        
+        .contact {
+            background: #333;
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .contact h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .contact-info {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+            
+            .price {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>🚀 From Expert to Published Author</h1>
+            <div class="subtitle">Transform Your Knowledge Into a Professional Book</div>
+            <div class="tagline">✨ AI-Powered • Publication-Ready • 30-45 Days ✨</div>
+            <a href="#pricing" class="cta-button">Start Your Book Journey Today</a>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <div class="stat-card">
+                <h3>30-45</h3>
+                <p>Days to Publication</p>
+            </div>
+            <div class="stat-card">
+                <h3>50-75K</h3>
+                <p>Professional Words</p>
+            </div>
+            <div class="stat-card">
+                <h3>8-12</h3>
+                <p>Comprehensive Chapters</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Publication Ready</p>
+            </div>
+        </div>
+
+        <!-- Value Proposition -->
+        <div class="value-section">
+            <h2>🎯 Why Choose AI-Powered Book Creation?</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <h3>⚡ Lightning Fast</h3>
+                    <p>Traditional book writing takes 6-18 months. Our AI-enhanced process delivers professional results in just 30-45 days without sacrificing quality.</p>
+                </div>
+                <div class="benefit">
+                    <h3>🧠 Expert Collaboration</h3>
+                    <p>Work directly with Marcus D. Taylor, combining your expertise with cutting-edge AI tools and proven publishing strategies.</p>
+                </div>
+                <div class="benefit">
+                    <h3>📈 Authority Building</h3>
+                    <p>Position yourself as the go-to expert in your field. A published book opens doors to speaking engagements, consulting opportunities, and premium clients.</p>
+                </div>
+                <div class="benefit">
+                    <h3>💼 Business Growth</h3>
+                    <p>Published authors see an average 78% increase in credibility and 45% boost in business opportunities within the first year.</p>
+                </div>
+                <div class="benefit">
+                    <h3>🎨 Professional Quality</h3>
+                    <p>Multi-stage editing, professional formatting, and publication-ready output that rivals traditional publishing houses.</p>
+                </div>
+                <div class="benefit">
+                    <h3>🌍 Multi-Platform Ready</h3>
+                    <p>Your book will be formatted for Amazon KDP, traditional publishers, audiobook production, and digital distribution.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <h2>📅 Your 30-45 Day Book Journey</h2>
+            <div class="timeline-item">
+                <div class="timeline-day">Days 1-10</div>
+                <div>
+                    <strong>Foundation & Strategy:</strong> Define your message, research your market, and build your AI-powered content framework.
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Days 11-28</div>
+                <div>
+                    <strong>Content Creation Sprint:</strong> Write your book using our proven AI-enhanced methodology with weekly strategy sessions.
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Days 29-38</div>
+                <div>
+                    <strong>Professional Refinement:</strong> Multi-stage editing, quality assurance, and publication-ready formatting.
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Days 39-45</div>
+                <div>
+                    <strong>Launch Preparation:</strong> Platform setup, marketing materials, and launch strategy implementation.
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="pricing" id="pricing">
+            <div class="pricing-content">
+                <h2>🎯 Complete Book Creation Package</h2>
+                <div class="price">$5,500</div>
+                <div class="payment-plan">
+                    <h3>Flexible Payment Options:</h3>
+                    <p>💰 50% Deposit: $2,750 (upon signing)</p>
+                    <p>📊 25% Midpoint: $1,375 (Day 15)</p>
+                    <p>✅ 25% Final: $1,375 (upon delivery)</p>
+                </div>
+                <a href="#contact" class="cta-button">🚀 Reserve Your Spot Now</a>
+                <a href="#contact" class="cta-button">📞 Schedule Strategy Call</a>
+            </div>
+        </div>
+
+        <!-- Guarantee -->
+        <div class="guarantee">
+            <h3>🛡️ Your Success Is Guaranteed</h3>
+            <p>We're so confident in our process that if you're not completely satisfied with your publication-ready manuscript, we'll work with you until you are. Your investment is protected by our commitment to excellence.</p>
+        </div>
+
+        <!-- What's Included -->
+        <div class="value-section">
+            <h2>📦 Everything You Need Is Included</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left;">
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                    ✅ <strong>Strategic Planning Sessions</strong><br>
+                    Market research and competitive analysis
+                </div>
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                    ✅ <strong>AI-Powered Content Creation</strong><br>
+                    Custom prompts and workflow optimization
+                </div>
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                    ✅ <strong>Professional Editing</strong><br>
+                    Multi-stage review and refinement process
+                </div>
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                    ✅ <strong>Publication Formatting</strong><br>
+                    Ready for all major publishing platforms
+                </div>
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                    ✅ <strong>Marketing Materials</strong><br>
+                    Book descriptions and promotional copy
+                </div>
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                    ✅ <strong>Launch Support</strong><br>
+                    Platform setup and publication assistance
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact" id="contact">
+            <h2>🤝 Ready to Become a Published Author?</h2>
+            <p>Don't let another year pass without sharing your expertise with the world.</p>
+            <div class="contact-info">
+                <strong>Marcus "MD" Taylor</strong><br>
+                Martaucy LLC<br>
+                📧 mdtaylor@martaucydesigns.biz<br>
+                📍 Coppell, TX
+            </div>
+            <a href="mailto:mdtaylor@martaucydesigns.biz?subject=Book Creation Consultation Request" class="cta-button">📧 Start Your Book Today</a>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0s';
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stat-card, .benefit, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
