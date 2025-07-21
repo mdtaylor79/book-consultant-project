@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - AI Book Creation Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .invoice-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .invoice-header {
+            background: #3b4999;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .invoice-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .invoice-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .invoice-body {
+            padding: 40px;
+        }
+        
+        .invoice-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .company-info, .client-info {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3b4999;
+        }
+        
+        .company-info h3, .client-info h3 {
+            color: #3b4999;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .company-info p, .client-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+        
+        .invoice-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #ff8a00;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .meta-item {
+            text-align: center;
+        }
+        
+        .meta-item .label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+        
+        .meta-item .value {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .services-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .services-table th {
+            background: #3b4999;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .services-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .services-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .phase-header {
+            background: #f8f9fa !important;
+            font-weight: bold;
+            color: #3b4999;
+        }
+        
+        .service-item {
+            padding-left: 20px;
+        }
+        
+        .totals {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 5px 0;
+        }
+        
+        .total-row.final {
+            border-top: 2px solid #3b4999;
+            padding-top: 15px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #3b4999;
+        }
+        
+        .payment-terms {
+            background: #3b4999;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .payment-terms h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .payment-schedule {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .payment-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .payment-item .amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #3b4999;
+            color: white;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .invoice-container {
+                box-shadow: none;
+                margin: 0;
+            }
+            
+            .payment-terms {
+                background: #f8f9fa;
+                color: #333;
+            }
+            
+            .payment-item {
+                background: #eee;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .invoice-details {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .invoice-meta {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .services-table {
+                font-size: 0.9rem;
+            }
+            
+            .services-table th,
+            .services-table td {
+                padding: 10px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <!-- Header -->
+        <div class="invoice-header">
+            <h1>INVOICE</h1>
+            <p>AI-Powered Book Creation Services</p>
+        </div>
+        
+        <!-- Body -->
+        <div class="invoice-body">
+            <!-- Invoice Details -->
+            <div class="invoice-details">
+                <div class="company-info">
+                    <h3>From:</h3>
+                    <p><strong>Martaucy LLC</strong></p>
+                    <p>Marcus "MD" Taylor</p>
+                    <p>1509 Pine Hurst Drive</p>
+                    <p>Coppell, TX 75019</p>
+                    <p>Email: mdtaylor@martaucydesigns.biz</p>
+                    <p>Phone: 972-292-8016</p>
+                </div>
+                
+                <div class="client-info">
+                    <h3>Bill To:</h3>
+                    <p><strong>Kelleyton Wilson Sr.</strong></p>
+                    <p>Author & Subject Matter Expert</p>
+                    <p>[Client Address]</p>
+                    <p>[City, State ZIP]</p>
+                    <p>Email: kelleytonsr@gmail.com</p>
+                    <p>Phone: 214-288-6873</p>
+                </div>
+            </div>
+            
+            <!-- Invoice Meta -->
+            <div class="invoice-meta">
+                <div class="meta-item">
+                    <div class="label">Invoice #</div>
+                    <div class="value">INV-2025-001</div>
+                </div>
+                <div class="meta-item">
+                    <div class="label">Date</div>
+                    <div class="value">January 20, 2025</div>
+                </div>
+                <div class="meta-item">
+                    <div class="label">Due Date</div>
+                    <div class="value">January 27, 2025</div>
+                </div>
+                <div class="meta-item">
+                    <div class="label">Terms</div>
+                    <div class="value">Net 7</div>
+                </div>
+            </div>
+            
+            <!-- Services Table -->
+            <table class="services-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Hours</th>
+                        <th>Rate</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="phase-header">
+                        <td colspan="4"><strong>Phase 1: Foundation & Strategy (Days 1-10)</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Project Setup & Vision Alignment</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Market Research & Content Architecture</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Content Planning & Resource Development</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                    
+                    <tr class="phase-header">
+                        <td colspan="4"><strong>Phase 2: Content Creation Sprint (Days 11-28)</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Chapter Framework Development (Chapters 1-2)</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Content Creation & AI Enhancement (Chapters 3-4)</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Advanced Content Development (Chapters 5-6)</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Content Completion & Integration (Chapters 7-8)</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Content Consolidation & Review</td>
+                        <td>2</td>
+                        <td>$137.50</td>
+                        <td>$275.00</td>
+                    </tr>
+                    
+                    <tr class="phase-header">
+                        <td colspan="4"><strong>Phase 3: Professional Refinement (Days 29-38)</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Comprehensive Review & Revision</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Final Polish & Quality Assurance</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Delivery & Transition</td>
+                        <td>2</td>
+                        <td>$137.50</td>
+                        <td>$275.00</td>
+                    </tr>
+                    
+                    <tr class="phase-header">
+                        <td colspan="4"><strong>Phase 4: Launch Preparation (Days 39-45)</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Publishing Preparation & Platform Setup</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                    <tr>
+                        <td class="service-item">Launch Support & Implementation</td>
+                        <td>4</td>
+                        <td>$137.50</td>
+                        <td>$550.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- Totals -->
+            <div class="totals">
+                <div class="total-row">
+                    <span>Subtotal (44 Hours):</span>
+                    <span>$6,050.00</span>
+                </div>
+                <div class="total-row">
+                    <span>Package Discount:</span>
+                    <span>-$550.00</span>
+                </div>
+                <div class="total-row final">
+                    <span>Total Amount:</span>
+                    <span>$5,500.00</span>
+                </div>
+            </div>
+            
+            <!-- Payment Terms -->
+            <div class="payment-terms">
+                <h3> Payment Schedule</h3>
+                <div class="payment-schedule">
+                    <div class="payment-item">
+                        <div class="amount">$2,750.00</div>
+                        <div>50% Deposit</div>
+                        <div><small>Upon Contract Signing</small></div>
+                    </div>
+                    <div class="payment-item">
+                        <div class="amount">$1,375.00</div>
+                        <div>25% Midpoint</div>
+                        <div><small>Due by Day 15</small></div>
+                    </div>
+                    <div class="payment-item">
+                        <div class="amount">$1,375.00</div>
+                        <div>25% Final</div>
+                        <div><small>Upon Project Delivery</small></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Terms -->
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                <h4 style="color: #3b4999; margin-bottom: 15px;">Terms & Conditions</h4>
+                <ul style="margin-left: 20px; color: #666;">
+                    <li>Payment terms: Net 7 days from invoice date</li>
+                    <li>Late payment fee: 5% after 10 days overdue</li>
+                    <li>Deposit is non-refundable upon project commencement</li>
+                    <li>Additional hours beyond 45 days billed at $135/hour</li>
+                    <li>Client retains full ownership of final manuscript</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>Thank you for choosing Martaucy LLC!</strong></p>
+            <p>Questions about this invoice? Contact us at mdtaylor@martaucydesigns.biz</p>
+            <p>Transforming Expertise into Published Authority Since 2025</p>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-populate current date if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            // You can add any dynamic date population or calculations here
+        });
+        
+        // Print functionality
+        function printInvoice() {
+            window.print();
+        }
+        
+        // Add print button if needed
+        const printBtn = document.createElement('button');
+        printBtn.textContent = 'Print Invoice';
+        printBtn.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3b4999;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        `;
+        printBtn.onclick = printInvoice;
+        document.body.appendChild(printBtn);
+    </script>
+</body>
+</html>
