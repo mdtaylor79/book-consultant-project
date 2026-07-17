@@ -1,509 +1,1010 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transform Your Expertise Into a Published Book in 30-45 Days</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 60px 0;
-            color: white;
-            background: rgba(0,0,0,0.1);
-            border-radius: 20px;
-            margin-bottom: 40px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: fadeInUp 1s ease-out;
-        }
-        
-        .hero .subtitle {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-        
-        .hero .tagline {
-            font-size: 1.2rem;
-            background: rgba(255,255,255,0.2);
-            padding: 15px 30px;
-            border-radius: 50px;
-            display: inline-block;
-            margin-bottom: 40px;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        
-        .stat-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s ease-out forwards;
-            transition: transform 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .stat-card h3 {
-            font-size: 2.5rem;
-            color: #667eea;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        
-        .stat-card p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-        
-        .value-section {
-            background: white;
-            border-radius: 20px;
-            padding: 60px 40px;
-            margin: 40px 0;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        
-        .value-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 40px;
-        }
-        
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        
-        .benefit {
-            padding: 30px;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            border-radius: 15px;
-            color: white;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .benefit:hover {
-            transform: scale(1.05);
-        }
-        
-        .benefit h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .benefit p {
-            opacity: 0.9;
-            line-height: 1.7;
-        }
-        
-        .pricing {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
-            margin: 40px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .pricing::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
-        }
-        
-        .pricing-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .pricing h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .price {
-            font-size: 4rem;
-            font-weight: bold;
-            margin: 30px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .payment-plan {
-            background: rgba(255,255,255,0.2);
-            padding: 20px;
-            border-radius: 15px;
-            margin: 30px 0;
-            backdrop-filter: blur(10px);
-        }
-        
-        .cta-button {
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-            color: white;
-            padding: 20px 40px;
-            font-size: 1.3rem;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(238, 90, 36, 0.3);
-            margin: 20px 10px;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: bold;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(238, 90, 36, 0.4);
-        }
-        
-        .guarantee {
-            background: #f8f9fa;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            margin: 40px 0;
-            border: 2px dashed #667eea;
-        }
-        
-        .guarantee h3 {
-            color: #667eea;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        
-        .timeline {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            margin: 40px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .timeline h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-            font-size: 2.2rem;
-        }
-        
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border-radius: 10px;
-            position: relative;
-        }
-        
-        .timeline-day {
-            background: white;
-            color: #667eea;
-            padding: 10px 15px;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-right: 20px;
-            min-width: 80px;
-            text-align: center;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(180deg); }
-        }
-        
-        .contact {
-            background: #333;
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .contact h2 {
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-        
-        .contact-info {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.4rem;
-            }
-            
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .benefits {
-                grid-template-columns: 1fr;
-            }
-            
-            .price {
-                font-size: 3rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martaucy Publishing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Base ───────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream:   #faf8f4;
+      --white:   #ffffff;
+      --ink:     #1a1a1a;
+      --slate:   #4a4a4a;
+      --muted:   #8a8a8a;
+      --rule:    #e2ddd7;
+      --gold:    #b8922e;
+      --gold-lt: #d4a94a;
+      --accent:  #2c3e50;
+      --radius:  4px;
+      --shadow:  0 4px 24px rgba(0,0,0,.10);
+      --shadow-lg: 0 12px 48px rgba(0,0,0,.15);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Utility ────────────────────────────────────────── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      font-family: 'Lato', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .divider {
+      width: 48px; height: 2px;
+      background: var(--gold);
+      margin: 20px auto;
+    }
+    .btn {
+      display: inline-block;
+      padding: 13px 30px;
+      font-family: 'Lato', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all .22s ease;
+      border: 2px solid transparent;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--white);
+      border-color: var(--gold);
+    }
+    .btn-primary:hover {
+      background: var(--gold-lt);
+      border-color: var(--gold-lt);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(184,146,46,.35);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+    .btn-dark {
+      background: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+    }
+    .btn-dark:hover {
+      background: #3d5166;
+      border-color: #3d5166;
+      transform: translateY(-1px);
+    }
+
+    /* ── Navigation ─────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,248,244,.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .nav-brand {
+      display: flex; flex-direction: column;
+      line-height: 1.1;
+    }
+    .nav-brand .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: var(--ink);
+    }
+    .nav-brand .tagline {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .nav-links {
+      display: flex; gap: 36px; list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--slate);
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links .nav-cta a {
+      color: var(--gold);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 2px;
+    }
+
+    /* ── Hero (Spotlight: Sellout) ──────────────────────── */
+    #hero {
+      min-height: 88vh;
+      display: flex; align-items: center;
+      background: linear-gradient(135deg, #1a1714 0%, #2c2520 40%, #1e1c19 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(184,146,46,.08) 0%, transparent 65%);
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 80px;
+      align-items: center;
+      position: relative; z-index: 1;
+      padding: 80px 0;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(184,146,46,.35);
+      padding: 6px 14px;
+      border-radius: 2px;
+      margin-bottom: 28px;
+    }
+    .hero-badge .dot {
+      width: 5px; height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity:1; } 50% { opacity:.4; }
+    }
+    .hero-title {
+      font-size: clamp(56px, 8vw, 96px);
+      font-weight: 700;
+      color: #f5f0e8;
+      line-height: .95;
+      letter-spacing: -.01em;
+      margin-bottom: 10px;
+    }
+    .hero-subtitle {
+      font-size: 18px;
+      font-weight: 400;
+      font-style: italic;
+      color: rgba(245,240,232,.55);
+      letter-spacing: .06em;
+      margin-bottom: 28px;
+    }
+    .hero-desc {
+      font-size: 17px;
+      color: rgba(245,240,232,.75);
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 40px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-cover {
+      position: relative;
+    }
+    .hero-cover img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 6px;
+      box-shadow: -20px 20px 60px rgba(0,0,0,.6), 6px 6px 0 rgba(184,146,46,.25);
+      display: block;
+    }
+    .cover-placeholder {
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 6/9;
+      background: linear-gradient(160deg, #2d2520 0%, #1a1714 100%);
+      border: 1px solid rgba(184,146,46,.2);
+      border-radius: 6px;
+      box-shadow: -20px 20px 60px rgba(0,0,0,.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(245,240,232,.35);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      text-align: center;
+      padding: 24px;
+    }
+
+    /* ── Section shared ─────────────────────────────────── */
+    section { padding: 96px 0; }
+    section:nth-of-type(even) { background: var(--white); }
+
+    /* ── Books section ──────────────────────────────────── */
+    #books .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    #books .section-header h2 {
+      font-size: 46px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 48px;
+    }
+    .book-card {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 32px;
+      padding: 40px;
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      transition: box-shadow .3s, transform .3s;
+    }
+    .book-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .book-cover-wrap {
+      flex-shrink: 0;
+      height: 270px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .book-cover-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 4px 6px 20px rgba(0,0,0,.18);
+      display: block;
+    }
+    .book-cover-placeholder {
+      width: 100%;
+      aspect-ratio: 6/9;
+      background: linear-gradient(160deg, #e8e4de 0%, #d5cfc7 100%);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      padding: 12px;
+      box-shadow: 4px 6px 20px rgba(0,0,0,.12);
+    }
+    .book-info { display: flex; flex-direction: column; }
+    .book-genre {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .book-title {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .book-series {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .book-desc {
+      font-size: 15px;
+      color: var(--slate);
+      line-height: 1.75;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+    .book-meta {
+      display: flex; gap: 20px;
+      font-size: 12px; color: var(--muted);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .book-meta span { display: flex; align-items: center; gap: 5px; }
+    .book-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    /* ── Retailer modal / buy links ─────────────────────── */
+    .retailer-list {
+      display: flex; flex-direction: column; gap: 12px;
+      padding: 20px 0;
+    }
+    .retailer-link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--ink);
+      transition: all .2s;
+      cursor: pointer;
+    }
+    .retailer-link:hover {
+      border-color: var(--gold);
+      background: rgba(184,146,46,.04);
+    }
+    .retailer-link .arrow { color: var(--gold); font-size: 18px; }
+
+    /* ── Modal ──────────────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0; z-index: 999;
+      background: rgba(15,12,10,.7);
+      backdrop-filter: blur(4px);
+      align-items: center; justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--white);
+      border-radius: 10px;
+      width: min(540px, calc(100vw - 40px));
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+      box-shadow: 0 24px 80px rgba(0,0,0,.3);
+      animation: slideUp .25s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(24px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    .modal-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding: 28px 28px 0;
+    }
+    .modal-header h3 {
+      font-size: 26px; font-weight: 700; color: var(--ink);
+      max-width: 80%;
+    }
+    .modal-close {
+      background: none; border: none; cursor: pointer;
+      font-size: 22px; color: var(--muted);
+      line-height: 1; padding: 0;
+      transition: color .2s;
+    }
+    .modal-close:hover { color: var(--ink); }
+    .modal-body { padding: 20px 28px 28px; }
+    .modal-body p {
+      font-size: 14px; color: var(--slate); margin-bottom: 20px;
+    }
+
+    /* ── Order Form section ─────────────────────────────── */
+    #order {
+      background: linear-gradient(135deg, #1a1714 0%, #2c2520 100%);
+    }
+    #order .section-header { text-align: center; margin-bottom: 56px; }
+    #order .section-header h2 { color: #f5f0e8; font-size: 42px; }
+    #order .section-header p {
+      color: rgba(245,240,232,.6);
+      font-size: 16px; margin-top: 12px;
+    }
+    .order-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .order-info h3 {
+      font-size: 28px; color: #f5f0e8;
+      margin-bottom: 16px;
+    }
+    .order-info p {
+      font-size: 15px; color: rgba(245,240,232,.65);
+      line-height: 1.8; margin-bottom: 24px;
+    }
+    .order-bullets { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .order-bullets li {
+      font-size: 14px; color: rgba(245,240,232,.7);
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .order-bullets li::before {
+      content: '✦';
+      color: var(--gold); flex-shrink: 0; margin-top: 2px;
+    }
+    form.order-form {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    label {
+      display: block;
+      font-size: 12px; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 6px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      font-family: 'Lato', sans-serif;
+      font-size: 15px;
+      color: var(--ink);
+      background: var(--cream);
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(184,146,46,.12);
+    }
+    textarea { resize: vertical; min-height: 100px; }
+    .form-submit { width: 100%; padding: 15px; font-size: 14px; }
+    .form-note {
+      font-size: 12px; color: var(--muted);
+      text-align: center; margin-top: 12px;
+    }
+    #form-success {
+      display: none;
+      text-align: center;
+      padding: 32px;
+      color: var(--ink);
+    }
+    #form-success .check {
+      font-size: 48px; margin-bottom: 12px;
+    }
+    #form-success h4 {
+      font-size: 24px; margin-bottom: 8px;
+    }
+    #form-success p {
+      font-size: 14px; color: var(--slate);
+    }
+
+    /* ── About Publisher ────────────────────────────────── */
+    #about { background: var(--white); }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-content h2 {
+      font-size: 42px; font-weight: 600;
+      color: var(--ink); margin-bottom: 20px;
+    }
+    .about-content p {
+      font-size: 16px; color: var(--slate);
+      line-height: 1.85; margin-bottom: 16px;
+    }
+    .about-brand {
+      padding: 48px;
+      background: linear-gradient(135deg, #1a1714 0%, #2c2520 100%);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .about-brand .publisher-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #f5f0e8;
+      letter-spacing: .06em;
+    }
+    .about-brand .publisher-sub {
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 8px;
+      margin-bottom: 32px;
+    }
+    .about-stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 24px; margin-top: 16px;
+    }
+    .stat { text-align: center; }
+    .stat .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px; font-weight: 700;
+      color: var(--gold); display: block;
+    }
+    .stat .lbl {
+      font-size: 11px; letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,.5);
+    }
+
+    /* ── Contact ────────────────────────────────────────── */
+    #contact { background: var(--cream); }
+    .contact-inner { text-align: center; }
+    .contact-inner h2 {
+      font-size: 42px; color: var(--ink); margin-bottom: 12px;
+    }
+    .contact-inner > p {
+      font-size: 16px; color: var(--slate); margin-bottom: 52px;
+    }
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 760px;
+      margin: 0 auto 48px;
+    }
+    .contact-card {
+      padding: 32px 20px;
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      text-align: center;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .contact-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+    .contact-icon { font-size: 28px; margin-bottom: 12px; }
+    .contact-card h4 {
+      font-size: 13px; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 8px;
+    }
+    .contact-card a, .contact-card p {
+      font-size: 15px; color: var(--ink);
+      font-weight: 400;
+    }
+    .contact-card a:hover { color: var(--gold); }
+
+    /* ── Footer ─────────────────────────────────────────── */
+    footer {
+      background: #0f0d0b;
+      padding: 40px 0;
+      text-align: center;
+    }
+    footer .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 700;
+      color: rgba(245,240,232,.9);
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+    }
+    footer .footer-copy {
+      font-size: 13px;
+      color: rgba(245,240,232,.3);
+    }
+    footer .footer-links {
+      display: flex; justify-content: center; gap: 28px;
+      list-style: none; margin: 16px 0;
+    }
+    footer .footer-links a {
+      font-size: 12px; letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,.4);
+      transition: color .2s;
+    }
+    footer .footer-links a:hover { color: var(--gold); }
+
+    /* ── Responsive ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-cover { order: -1; display: flex; justify-content: center; }
+      .hero-cover img, .cover-placeholder { max-width: 220px; }
+      .books-grid { grid-template-columns: 1fr; }
+      .book-card { grid-template-columns: 140px 1fr; gap: 24px; padding: 28px; }
+      .order-grid { grid-template-columns: 1fr; }
+      .about-inner { grid-template-columns: 1fr; }
+      .contact-cards { grid-template-columns: 1fr; max-width: 360px; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .book-card { grid-template-columns: 1fr; }
+      .book-cover-wrap { max-width: 160px; }
+      .form-row { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      section { padding: 64px 0; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Hero Section -->
-        <div class="hero">
-            <h1>🚀 From Expert to Published Author</h1>
-            <div class="subtitle">Transform Your Knowledge Into a Professional Book</div>
-            <div class="tagline">✨ AI-Powered • Publication-Ready • 30-45 Days ✨</div>
-            <a href="#pricing" class="cta-button">Start Your Book Journey Today</a>
-        </div>
 
-        <!-- Stats Section -->
-        <div class="stats">
-            <div class="stat-card">
-                <h3>30-45</h3>
-                <p>Days to Publication</p>
-            </div>
-            <div class="stat-card">
-                <h3>50-75K</h3>
-                <p>Professional Words</p>
-            </div>
-            <div class="stat-card">
-                <h3>8-12</h3>
-                <p>Comprehensive Chapters</p>
-            </div>
-            <div class="stat-card">
-                <h3>100%</h3>
-                <p>Publication Ready</p>
-            </div>
-        </div>
+<!-- ── Navigation ─────────────────────────────────────── -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="nav-brand">
+      <span class="name">Martaucy Publishing</span>
+      <span class="tagline">Literature &amp; Children's Books</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#books">Books</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="nav-cta"><a href="#order">Order Now</a></li>
+    </ul>
+  </div>
+</nav>
 
-        <!-- Value Proposition -->
-        <div class="value-section">
-            <h2>🎯 Why Choose AI-Powered Book Creation?</h2>
-            <div class="benefits">
-                <div class="benefit">
-                    <h3>⚡ Lightning Fast</h3>
-                    <p>Traditional book writing takes 6-18 months. Our AI-enhanced process delivers professional results in just 30-45 days without sacrificing quality.</p>
-                </div>
-                <div class="benefit">
-                    <h3>🧠 Expert Collaboration</h3>
-                    <p>Work directly with Marcus D. Taylor, combining your expertise with cutting-edge AI tools and proven publishing strategies.</p>
-                </div>
-                <div class="benefit">
-                    <h3>📈 Authority Building</h3>
-                    <p>Position yourself as the go-to expert in your field. A published book opens doors to speaking engagements, consulting opportunities, and premium clients.</p>
-                </div>
-                <div class="benefit">
-                    <h3>💼 Business Growth</h3>
-                    <p>Published authors see an average 78% increase in credibility and 45% boost in business opportunities within the first year.</p>
-                </div>
-                <div class="benefit">
-                    <h3>🎨 Professional Quality</h3>
-                    <p>Multi-stage editing, professional formatting, and publication-ready output that rivals traditional publishing houses.</p>
-                </div>
-                <div class="benefit">
-                    <h3>🌍 Multi-Platform Ready</h3>
-                    <p>Your book will be formatted for Amazon KDP, traditional publishers, audiobook production, and digital distribution.</p>
-                </div>
-            </div>
+<!-- ── Hero — Sellout Spotlight ──────────────────────── -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge"><span class="dot"></span>Featured Title</span>
+        <h1 class="hero-title">SELLOUT</h1>
+        <p class="hero-subtitle">A Contemporary Allegory</p>
+        <p class="hero-desc">
+          A bold, unflinching allegory for our times — exploring identity, ambition,
+          and the hidden price of belonging. <em>Sellout</em> holds a mirror to a world
+          that rewards performance over truth, and asks the question every generation
+          must answer for itself.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" onclick="openModal('sellout'); return false;">Buy Now</a>
+          <a href="#books" class="btn btn-outline" style="color:#f5f0e8; border-color:rgba(245,240,232,.4);" onmouseover="this.style.color='#1a1a1a'" onmouseout="this.style.color='#f5f0e8'">See All Books</a>
         </div>
+      </div>
+      <div class="hero-cover">
+        <img src="https://github.com/mdtaylor79/book-consultant-project/blob/main/sellout_hardocover_front.png?raw=true" alt="Sellout — Book Cover"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="cover-placeholder" style="display:none;">
+          <div style="font-size:13px; letter-spacing:.1em; text-transform:uppercase;">Sellout</div>
+          <div style="font-size:11px; opacity:.6;">Place https://github.com/mdtaylor79/book-consultant-project/blob/main/sellout_hardocover_front.png?raw=true<br>in the same folder</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Timeline -->
-        <div class="timeline">
-            <h2>📅 Your 30-45 Day Book Journey</h2>
-            <div class="timeline-item">
-                <div class="timeline-day">Days 1-10</div>
-                <div>
-                    <strong>Foundation & Strategy:</strong> Define your message, research your market, and build your AI-powered content framework.
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-day">Days 11-28</div>
-                <div>
-                    <strong>Content Creation Sprint:</strong> Write your book using our proven AI-enhanced methodology with weekly strategy sessions.
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-day">Days 29-38</div>
-                <div>
-                    <strong>Professional Refinement:</strong> Multi-stage editing, quality assurance, and publication-ready formatting.
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-day">Days 39-45</div>
-                <div>
-                    <strong>Launch Preparation:</strong> Platform setup, marketing materials, and launch strategy implementation.
-                </div>
-            </div>
-        </div>
-
-        <!-- Pricing Section -->
-        <div class="pricing" id="pricing">
-            <div class="pricing-content">
-                <h2>🎯 Complete Book Creation Package</h2>
-                <div class="price">$5,500</div>
-                <div class="payment-plan">
-                    <h3>Flexible Payment Options:</h3>
-                    <p>💰 50% Deposit: $2,750 (upon signing)</p>
-                    <p>📊 25% Midpoint: $1,375 (Day 15)</p>
-                    <p>✅ 25% Final: $1,375 (upon delivery)</p>
-                </div>
-                <a href="#contact" class="cta-button">🚀 Reserve Your Spot Now</a>
-                <a href="#contact" class="cta-button">📞 Schedule Strategy Call</a>
-            </div>
-        </div>
-
-        <!-- Guarantee -->
-        <div class="guarantee">
-            <h3>🛡️ Your Success Is Guaranteed</h3>
-            <p>We're so confident in our process that if you're not completely satisfied with your publication-ready manuscript, we'll work with you until you are. Your investment is protected by our commitment to excellence.</p>
-        </div>
-
-        <!-- What's Included -->
-        <div class="value-section">
-            <h2>📦 Everything You Need Is Included</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left;">
-                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                    ✅ <strong>Strategic Planning Sessions</strong><br>
-                    Market research and competitive analysis
-                </div>
-                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                    ✅ <strong>AI-Powered Content Creation</strong><br>
-                    Custom prompts and workflow optimization
-                </div>
-                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                    ✅ <strong>Professional Editing</strong><br>
-                    Multi-stage review and refinement process
-                </div>
-                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                    ✅ <strong>Publication Formatting</strong><br>
-                    Ready for all major publishing platforms
-                </div>
-                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                    ✅ <strong>Marketing Materials</strong><br>
-                    Book descriptions and promotional copy
-                </div>
-                <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
-                    ✅ <strong>Launch Support</strong><br>
-                    Platform setup and publication assistance
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="contact" id="contact">
-            <h2>🤝 Ready to Become a Published Author?</h2>
-            <p>Don't let another year pass without sharing your expertise with the world.</p>
-            <div class="contact-info">
-                <strong>Marcus "MD" Taylor</strong><br>
-                Martaucy LLC<br>
-                📧 mdtaylor@martaucydesigns.biz<br>
-                📍 Coppell, TX
-            </div>
-            <a href="mailto:mdtaylor@martaucydesigns.biz?subject=Book Creation Consultation Request" class="cta-button">📧 Start Your Book Today</a>
-        </div>
+<!-- ── Books ─────────────────────────────────────────── -->
+<section id="books">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Catalog</span>
+      <h2>Available Titles</h2>
+      <div class="divider"></div>
     </div>
 
-    <script>
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    <div class="books-grid">
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+      <!-- Book 1: Sellout -->
+      <div class="book-card">
+        <div class="book-cover-wrap">
+          <img src="https://github.com/mdtaylor79/book-consultant-project/blob/main/sellout_hardocover_front.png?raw=true" alt="Sellout"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="book-cover-placeholder" style="display:none;">Sellout</div>
+        </div>
+        <div class="book-info">
+          <span class="book-genre">Literary Fiction · Allegory</span>
+          <h3 class="book-title">Sellout</h3>
+          <p class="book-series">A Contemporary Allegory</p>
+          <p class="book-desc">
+            A searing contemporary allegory that examines what we sacrifice when we
+            trade our authenticity for acceptance. Provocative, poetic, and impossible
+            to put down.
+          </p>
+          <div class="book-meta">
+            <span>📖 Fiction</span>
+            <span>✍️ MD Taylor</span>
+          </div>
+          <div class="book-actions">
+            <a href="#" class="btn btn-primary" onclick="openModal('sellout'); return false;">Buy Now</a>
+            <a href="#order" class="btn btn-outline">Order Direct</a>
+          </div>
+        </div>
+      </div>
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = '0s';
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, observerOptions);
+      <!-- Book 2: What Are AI Helpers? -->
+      <div class="book-card">
+        <div class="book-cover-wrap">
+          <img src="https://github.com/mdtaylor79/book-consultant-project/blob/main/What%20are%20AI%20Friends_front.png?raw=true" alt="What Are AI Helpers?"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="book-cover-placeholder" style="display:none;">What Are AI Helpers?</div>
+        </div>
+        <div class="book-info">
+          <span class="book-genre">Children's Book · Ages 4–8</span>
+          <h3 class="book-title">What Are AI Helpers?</h3>
+          <p class="book-series">A First Book About AI Chatbots</p>
+          <p class="book-desc">
+            A bright, joyful introduction to artificial intelligence for young readers.
+            Children discover how AI helpers work, why they're useful, and how to use
+            them wisely — told through colorful illustrations and friendly characters.
+          </p>
+          <div class="book-meta">
+            <span>📖 Children's</span>
+            <span>✍️ MD Taylor</span>
+          </div>
+          <div class="book-actions">
+            <a href="#" class="btn btn-primary" onclick="openModal('ai'); return false;">Buy Now</a>
+            <a href="#order" class="btn btn-outline">Order Direct</a>
+          </div>
+        </div>
+      </div>
 
-        document.querySelectorAll('.stat-card, .benefit, .timeline-item').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+    </div>
+  </div>
+</section>
+
+<!-- ── Direct Order Form ──────────────────────────────── -->
+<section id="order">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" style="color:var(--gold-lt);">Direct from the Publisher</span>
+      <h2>Place an Order</h2>
+      <p>Order directly and we'll get your books to you personally.</p>
+    </div>
+    <div class="order-grid">
+      <div class="order-info">
+        <h3>Why Order Direct?</h3>
+        <p>
+          Ordering directly from Martaucy Publishing means your purchase goes
+          straight to supporting the author and our independent press.
+          We handle each order with care and can accommodate special requests
+          including signed copies, bulk orders, and school or classroom sets.
+        </p>
+        <ul class="order-bullets">
+          <li>Personalized &amp; signed copies available</li>
+          <li>Bulk &amp; classroom discounts for educators</li>
+          <li>Fast fulfillment — we respond within 24 hours</li>
+          <li>Direct support to the author and publisher</li>
+        </ul>
+      </div>
+      <form class="order-form" id="orderForm" onsubmit="submitOrder(event)">
+        <h3 style="font-size:24px; margin-bottom:24px; color:var(--ink);">Order Form</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="First" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Last" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+        </div>
+        <div class="form-group">
+          <label for="book">Book Selection</label>
+          <select id="book" name="book" required>
+            <option value="" disabled selected>Choose a title…</option>
+            <option value="sellout">Sellout: A Contemporary Allegory</option>
+            <option value="ai-helpers">What Are AI Helpers? (Children's Book)</option>
+            <option value="both">Both Titles</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="qty">Quantity</label>
+          <select id="qty" name="qty">
+            <option value="1">1 copy</option>
+            <option value="2">2 copies</option>
+            <option value="3">3 copies</option>
+            <option value="5">5 copies</option>
+            <option value="10+">10+ (bulk — we'll contact you)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="notes">Special Requests</label>
+          <textarea id="notes" name="notes" placeholder="Signed copy, personalized inscription, gift wrapping, etc."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Submit Order Request</button>
+        <p class="form-note">We'll confirm your order by email within 24 hours.</p>
+        <div id="form-success">
+          <div class="check">✅</div>
+          <h4>Order Received!</h4>
+          <p>Thank you! We'll be in touch at your email address within 24 hours to confirm your order.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── About ──────────────────────────────────────────── -->
+<section id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-content">
+        <span class="section-label">The Publisher</span>
+        <h2>About Martaucy Publishing</h2>
+        <p>
+          Martaucy Publishing is an independent press committed to bringing meaningful
+          stories to readers of all ages. From literary fiction that challenges and
+          provokes, to children's books that open young minds to the world around them —
+          we believe in the power of words to shape culture.
+        </p>
+        <p>
+          Founded by MD Taylor, Martaucy Publishing is built on the conviction that
+          independent voices deserve to be heard. Every title we release is chosen
+          with intention, crafted with care, and sent into the world with purpose.
+        </p>
+        <a href="#contact" class="btn btn-dark" style="margin-top:8px;">Get in Touch</a>
+      </div>
+      <div class="about-brand">
+        <div class="publisher-name">Martaucy Publishing</div>
+        <div class="publisher-sub">Independent Press</div>
+        <div class="divider" style="margin:0 auto 32px;"></div>
+        <div class="about-stats">
+          <div class="stat"><span class="num">2</span><span class="lbl">Published Titles</span></div>
+          <div class="stat"><span class="num">2</span><span class="lbl">Genres</span></div>
+          <div class="stat"><span class="num">1</span><span class="lbl">Vision</span></div>
+          <div class="stat"><span class="num">∞</span><span class="lbl">Stories to Tell</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ────────────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <span class="section-label">Get in Touch</span>
+      <h2>Contact Us</h2>
+      <p>Questions about orders, rights, or media inquiries? We'd love to hear from you.</p>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <h4>Email</h4>
+          <a href="mailto:info@martaucypublishing.com">info@martaucypublishing.com</a>
+        </div>
+        <div class="contact-card">
+          <h4>Phone</h4>
+          <a href="tel:9722928016">(972) 292-8016</a>
+        </div>
+        <div class="contact-card">
+          <h4>Author</h4>
+          <p>MD Taylor</p>
+        </div>
+      </div>
+      <a href="mailto:info@martaucypublishing.com" class="btn btn-primary">Send Us a Message</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-brand">Martaucy Publishing</div>
+    <ul class="footer-links">
+      <li><a href="#books">Books</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Martaucy Publishing · MD Taylor · All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ── Buy Modal: Sellout ─────────────────────────────── -->
+<div class="modal-overlay" id="modal-sellout" onclick="closeModal('sellout')">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <h3>Buy Sellout: A Contemporary Allegory</h3>
+      <button class="modal-close" onclick="closeModal('sellout')" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>Choose your preferred retailer or order directly from us:</p>
+      <div class="retailer-list">
+        <a href="https://www.amazon.com/Sellout-Contemporary-Allegory-MD-Taylor/dp/B0GX2CC16M/" target="_blank" rel="noopener" class="retailer-link">
+          <span>🛒 Amazon</span><span class="arrow">→</span>
+        </a>
+      </div>
+      <div style="margin-top:16px; text-align:center;">
+        <a href="#order" class="btn btn-outline" onclick="closeModal('sellout')">Order Direct from Publisher</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Buy Modal: AI Helpers ──────────────────────────── -->
+<div class="modal-overlay" id="modal-ai" onclick="closeModal('ai')">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <h3>Buy What Are AI Helpers?</h3>
+      <button class="modal-close" onclick="closeModal('ai')" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>Choose your preferred retailer or order directly from us:</p>
+      <div class="retailer-list">
+        <a href="https://www.amazon.com/What-Are-AI-Helpers-Chatbots/dp/B0GX51HTGL/" target="_blank" rel="noopener" class="retailer-link">
+          <span>🛒 Amazon</span><span class="arrow">→</span>
+        </a>
+      </div>
+      <div style="margin-top:16px; text-align:center;">
+        <a href="#order" class="btn btn-outline" onclick="closeModal('ai')">Order Direct from Publisher</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* Modal controls */
+  function openModal(id) {
+    document.getElementById('modal-' + id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById('modal-' + id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      ['sellout','ai'].forEach(closeModal);
+    }
+  });
+
+  /* Order form */
+  function submitOrder(e) {
+    e.preventDefault();
+    const form = document.getElementById('orderForm');
+    const success = document.getElementById('form-success');
+    const data = new FormData(form);
+
+    // Build mailto as fallback (no backend)
+    const fname  = data.get('fname');
+    const lname  = data.get('lname');
+    const email  = data.get('email');
+    const phone  = data.get('phone') || 'N/A';
+    const book   = data.get('book');
+    const qty    = data.get('qty');
+    const notes  = data.get('notes') || 'None';
+
+    const body = encodeURIComponent(
+      `New order from ${fname} ${lname}\nEmail: ${email}\nPhone: ${phone}\nBook: ${book}\nQty: ${qty}\nNotes: ${notes}`
+    );
+    const subject = encodeURIComponent(`Book Order — ${book}`);
+    window.location.href = `mailto:info@martaucypublishing.com?subject=${subject}&body=${body}`;
+
+    // Show success
+    form.querySelectorAll('input,select,textarea,button').forEach(el => el.style.display = 'none');
+    form.querySelector('h3').style.display = 'none';
+    success.style.display = 'block';
+  }
+
+  /* Smooth active nav link highlight on scroll */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.style.color = '');
+        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (active) active.style.color = 'var(--gold)';
+      }
+    });
+  }, { threshold: .4 });
+  sections.forEach(s => observer.observe(s));
+</script>
 </body>
 </html>
